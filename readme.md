@@ -1,5 +1,5 @@
 # This is my git repository
-I have created this for school purposes.
+__I have created this for school purposes.__
 
 ## _**I like cheese**_
 
