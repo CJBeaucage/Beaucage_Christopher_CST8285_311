@@ -3,4 +3,6 @@ I have created this for school purposes.
 
 ## _**I like cheese**_
 
-```system.out.println("Cheese");```
+```java 
+system.out.println("Cheese");
+```
