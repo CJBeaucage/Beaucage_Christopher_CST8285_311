@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christopher Beaucage">
+    <title>Lab2 Order Form Page</title>
+</head>
+
+<body>
+    <fieldset>
+        <h1>Order Form</h1>
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="inputname"> Name: </label>
+            <input type="text" name="Namebox" size="30" value="Chris" id="inputname" disabled>
+            <br><br>
+            <label for="inputemail"> Email: </label>
+            <input type="text" name="Emailbox" size="30" id="inputemail">
+            <br><br>
+            <label for="inputaddress"> Address: </label>
+            <textarea name="addressbox" cols="20" rows="4" id="inputaddress"></textarea>
+            <br><br>
+            <label for="inputpostalcode"> Postal Code: </label>
+            <input type="text" name="PostalCode" size="30" id="inputpostalcode">
+        </fieldset>
+        <fieldset>
+            <legend>Product Information</legend>
+            <table></table>
+        </fieldset>
+        <h4>Credit Card Information</h4>
+        <div name="CreditCardInfo" id="CreditCardInfo">
+            <label for="CreditCardInfo">Credit Card Type</label>
+            <label for="CreditCardNumber"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Credit Card Number:</label>
+            <input type="text" size="16"><br>
+            <input type="radio" name="CreditCardType" id="MasterCard" value="MasterCard">
+            <label for="MasterCard">Master Card</label><br>
+            <input type="radio" name="CreditCardType" id="Visa" value="Visa">
+            <label for="Visa">Visa</label><br>
+            <input type="radio" name="CreditCardType" id="GiftCard" value="GiftCard">
+            <label for="GiftCard">Gift Card</label>
+            <label for="ExpirationDate">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expiration Date</label>
+            <input type="date" name="ExpirationDate" id="ExpirationDate">
+        </div><br>
+        <input type="submit" name ="Submit" id="Submit" value="Send Order">
+        <input type="reset" name="Reset" id="Reset" value="Clear Form">
+    </fieldset>
+</body>
+
+</html>
