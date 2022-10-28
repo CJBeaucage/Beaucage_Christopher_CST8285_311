@@ -1,0 +1,49 @@
+/*
+* Project: Assignment1
+* Authour: Chris Beaucage
+* Date:
+*/
+
+/* Dropdown Button */
+.dropbutton {
+    background-color: #3ca2e6;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  .dropbutton:hover {
+    background-color: black;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3ca2e6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: whitesmoke;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: black;
+}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
