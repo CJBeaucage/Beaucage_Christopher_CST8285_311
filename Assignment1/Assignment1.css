@@ -1,7 +1,7 @@
 /*
 * Project: Assignment1
 * Authour: Chris Beaucage
-* Date:
+* Date: 2022/10/30
 */
 
 body {
@@ -23,7 +23,8 @@ body {
 }
 
 .dropbutton:hover {
-  background-color: #0b545e;;
+  background-color: #0b545e;
+  ;
 }
 
 .dropbutton {
@@ -50,7 +51,8 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #0b545e;;
+  background-color: #0b545e;
+  ;
 }
 
 .show {
@@ -67,6 +69,7 @@ header {
   display: grid;
   background-color: #228996;
   grid-template-areas: "dropdown . . header1 . . .";
+
 }
 
 .Thumbnail {
@@ -95,7 +98,8 @@ img {
   border-radius: 10%;
 }
 
-h3, h4 {
+h3,
+h4 {
   background-color: #228996;
   color: whitesmoke;
   text-align: center;
@@ -147,7 +151,7 @@ footer {
   color: #0b545e;
 }
 
-.searchTerm:focus{
+.searchTerm:focus {
   color: #0b545e;
 }
 
@@ -167,13 +171,53 @@ footer {
   background-color: #0b545e;
 }
 
+
 #gridbox {
   display: grid;
   grid-template-areas: ". . searchbar searchbar . ."
-  ". FilterBy . . . ."
-  ". filter1 filter2 filter3 filter4 ."
-  "Course1 Course1 Course2 Course2 Course3 Course3"
-  "Course4 Course4 Course5 Course5 Course6 Course6";
+    ". FilterBy . . . ."
+    ". filter1 filter2 filter3 filter4 ."
+    "Course1 Course1 Course2 Course2 Course3 Course3"
+    "Course4 Course4 Course5 Course5 Course6 Course6";
+}
+
+
+@media screen and (max-width:800px) {
+  #gridbox {
+    display: grid;
+    grid-template-areas: "searchbar"
+      "FilterBy"
+      "filter1"
+      "filter2"
+      "filter3"
+      "filter4"
+      "Course1"
+      "Course2"
+      "Course3"
+      "Course4"
+      "Course5"
+      "Course6";
+  }
+
+  header {
+    display: grid;
+    background-color: #228996;
+    grid-template-areas: ". header1 ."
+      "dropdown dropdown dropdown";
+
+  }
+
+  .dropbutton {
+    background-color: #228996;
+    color: whitesmoke;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gainsboro;
+    grid-area: dropdown;
+  }
 }
 
 .bar {
@@ -222,21 +266,46 @@ footer {
   background-color: #228996;
   color: whitesmoke;
   border-radius: 2%;
+  border: 2px;
   text-align: center;
   margin: 20px;
+  position: relative;
+  width: auto;
+  box-shadow: 0px 2px 2px 0px #02383f;
 }
 
-.Course > img {
+.Course>img {
   width: 80px;
 }
 
-.Course > p {
+.Course>p {
   font-size: 12px;
+}
+
+.CourseDescription {
+  display: none;
+
+}
+
+.Course:hover {
+  background-color: #0b545e;
+  cursor: pointer;
+}
+
+.Course:hover>.CourseDescription {
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  background-color: #0b545e;
+  cursor: pointer;
 }
 
 #Course1 {
   grid-area: Course1;
 }
+
 
 #Course2 {
   grid-area: Course2;
@@ -257,4 +326,3 @@ footer {
 #Course6 {
   grid-area: Course6;
 }
-

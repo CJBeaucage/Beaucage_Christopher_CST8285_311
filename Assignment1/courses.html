@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    /*
+    * Project: Assignment1
+    * Authour: Chris Beaucage
+    * Date: 2022/10/30
+    */
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,19 +33,19 @@
     </header>
 
     <div id="gridbox">
-    <div class="bar">
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="What are you looking for?">
-           <button type="submit" class="searchButton">
-             <i class="fa fa-search"></i>
-          </button>
+        <div class="bar">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <p id="FilterBy">
+                Filter by Term:
+            </p>
         </div>
-        <p id="FilterBy">
-            Filter by Term:
-        </p>
-     </div>
-     <button class="filter" id="filter1"> 
-        Term 1</button>
+        <button class="filter" id="filter1">
+            Term 1</button>
         <button class="filter" id="filter2">
             Term 2
         </button>
@@ -52,53 +58,81 @@
 
         <div class="Course" id="Course1">
             <img src="JavaIcon.png" alt="Icon for Intro to Computer Programming Course.">
-            <p>
-                CST8116 
-                Intro to Computer 
+            <p class="CourseTitle">
+                CST8116
+                Intro to Computer
                 Programming
             </p>
+            <div class="CourseDescription">
+                Students develop introductory knowledge of computer programming with emphasis on problem analysis and
+                design, using algorithms, pseudocode, flowcharts, UML Class Diagrams and testing, with the Java
+                programming language used as a means to implement problem solution designs.
+            </div>
         </div>
 
         <div class="Course" id="Course2">
             <img src="SQLIcon.png" alt="Icon for Intro to Databases Course.">
             <p class="CouresTitle">
-                CST8215 
+                CST8215
                 Intro to Databases
             </p>
+            <div class="CourseDescription">
+                Students learn the fundamentals of Relational Databases design using Entity Relation diagrams, and use
+                SQL to create, modify and query a database.
+            </div>
         </div>
 
         <div class="Course" id="Course3">
             <img src="ComputerIcon.png" alt="Icon for Computer Essentials Course.">
             <p class="CouresTitle">
-                CST8101 
+                CST8101
                 Computer Essentials
             </p>
+            <div class="CourseDescription">
+                Learn to configure your laptop environment, basic PC and troubleshoot problems. Create backups, install
+                virus protection, and manage files through a basic understanding of the Windows Operating System.
+            </div>
         </div>
 
         <div class="Course" id="Course4">
             <img src="MathIcon.png" alt="Icon for Technical Math Course.">
             <p class="CouresTitle">
-                MAT8001C 
-                Technical Math for 
+                MAT8001C
+                Technical Math for
                 Computer Sciences
             </p>
+            <div class="CourseDescription" id="Description1">
+                Students manipulate algebraic expressions, solve algebraic equations and linear systems and learn the
+                properties of and graph algebraic and transcendental functions.
+            </div>
         </div>
 
         <div class="Course" id="Course5">
             <img src="CommunicationIcon.png" alt="Icon for Communication Course.">
             <p class="CouresTitle">
-                ENL1813T 
+                ENL1813T
                 Communications
             </p>
+            <div class="CourseDescription">
+                Through a combination of lectures, exercises, and independent learning, students practise writing,
+                speaking, reading, listening, locating and documenting information and using technology to communicate
+                professionally. Students develop and strengthen communication skills that contribute to success in both
+                educational and workplace environments.
+            </div>
         </div>
 
         <div class="Course" id="Course6">
             <img src="SuccessIcon.png" alt="Icon for Achieving Succes Course.">
             <p class="CouresTitle">
-                CST8300 
-                Achieving Succes in 
+                CST8300
+                Achieving Succes in
                 Changing Environments
-            </p>    
+            </p>
+            <div class="CourseDescription">
+                Students explore the possibilities ahead, assess their own aptitudes and strengths, and apply critical
+                thinking and decision-making tools to help resolve some of the important issues in our complex society
+                with its competing interests.
+            </div>
         </div>
 
     </div>
