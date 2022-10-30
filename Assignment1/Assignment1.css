@@ -4,46 +4,257 @@
 * Date:
 */
 
-/* Dropdown Button */
-.dropbutton {
-    background-color: #3ca2e6;
-    color: whitesmoke;
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-
-  .dropbutton:hover {
-    background-color: black;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3ca2e6;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: whitesmoke;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: black;
+body {
+  background-color: gainsboro;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+
+
+.dropbutton {
+  background-color: #228996;
+  color: whitesmoke;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-width: 0px 2px 0px 0px;
+  border-style: solid;
+  border-color: gainsboro;
+  grid-area: dropdown;
+}
+
+.dropbutton:hover {
+  background-color: #0b545e;;
+}
+
+.dropbutton {
+  position: relative;
+  display: inline-block;
+  font-size: larger;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #228996;
+  box-shadow: 0px 8px 16px 0px #02383f;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: whitesmoke;
+  font-size: larger;
+  padding: 28px 42px;
+  text-decoration: none;
+  display: block;
+  border: gainsboro solid 1px;
+}
+
+.dropdown-content a:hover {
+  background-color: #0b545e;;
+}
+
+.show {
+  display: block;
+}
+
+h1 {
+  grid-area: header1;
+  color: whitesmoke;
+}
+
+
+header {
+  display: grid;
+  background-color: #228996;
+  grid-template-areas: "dropdown . . header1 . . .";
+}
+
+.Thumbnail {
+  float: right;
+  width: 15%;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.AboutMe {
+  text-align: left;
+}
+
+.SchoolLink {
+  color: #228996;
+}
+
+.SchoolLink:visited {
+  color: #0b545e;
+}
+
+img {
+  float: right;
+  width: 25%;
+  margin: 20px;
+  border-radius: 10%;
+}
+
+h3, h4 {
+  background-color: #228996;
+  color: whitesmoke;
+  text-align: center;
+  padding: 4px;
+}
+
+p {
+  white-space: pre-line;
+}
+
+footer {
+  display: grid;
+  grid-template-areas: "Link2 Link1"
+    "Link4 Link3";
+}
+
+#Link1 {
+  grid-area: Link1;
+}
+
+#Link2 {
+  grid-area: Link2;
+  margin: 35px 10px;
+}
+
+#Link3 {
+  grid-area: Link3;
+}
+
+#Link4 {
+  grid-area: Link4;
+  margin: 35px 10px;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #228996;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #0b545e;
+}
+
+.searchTerm:focus{
+  color: #0b545e;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #228996;
+  background: #228996;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchButton:hover {
+  background-color: #0b545e;
+}
+
+#gridbox {
+  display: grid;
+  grid-template-areas: ". . searchbar searchbar . ."
+  ". FilterBy . . . ."
+  ". filter1 filter2 filter3 filter4 ."
+  "Course1 Course1 Course2 Course2 Course3 Course3"
+  "Course4 Course4 Course5 Course5 Course6 Course6";
+}
+
+.bar {
+  width: auto;
+  margin: 2%;
+  grid-area: searchbar;
+}
+
+#FilterBy {
+  grid-area: FilterBy;
+}
+
+.filter {
+  background-color: #228996;
+  color: whitesmoke;
+  padding: 16px;
+  font-size: 16px;
+  margin: 10px;
+  box-shadow: 0px 2px 2px 0px #02383f;
+  cursor: pointer;
+  border: 2px;
+}
+
+.filter:hover {
+  background-color: #0b545e;
+}
+
+#filter1 {
+  grid-area: filter1;
+}
+
+#filter2 {
+  grid-area: filter2;
+}
+
+#filter3 {
+  grid-area: filter3;
+}
+
+#filter4 {
+  grid-area: filter4;
+}
+
+.Course {
+  text-align: center;
+  background-color: #228996;
+  color: whitesmoke;
+  border-radius: 2%;
+  text-align: center;
+  margin: 20px;
+}
+
+.Course > img {
+  width: 80px;
+}
+
+.Course > p {
+  font-size: 12px;
+}
+
+#Course1 {
+  grid-area: Course1;
+}
+
+#Course2 {
+  grid-area: Course2;
+}
+
+#Course3 {
+  grid-area: Course3;
+}
+
+#Course4 {
+  grid-area: Course4;
+}
+
+#Course5 {
+  grid-area: Course5;
+}
+
+#Course6 {
+  grid-area: Course6;
+}
+

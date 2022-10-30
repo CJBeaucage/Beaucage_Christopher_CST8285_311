@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,101 @@
     <title>Chris Beaucage: Current Education</title>
     <link rel="stylesheet" href="Assignment1.css" type="text/css">
 </head>
+
 <body>
     <script>
         function myFunction() {
             document.getElementById("dropdown").classList.toggle("show");
-          }
-        </script>
+        }
+    </script>
     <header id="EducationHeader">
-        
-    <button onclick="myFunction()" class="dropbutton">Navigation</button>
+
+        <button onclick="myFunction()" class="dropbutton">Navigation</button>
         <nav id="dropdown" class="dropdown-content">
-            <a href="index.html">Main Page</a>
+            <a href="index.html">About Me</a>
             <a href="resume.html">Resume</a>
             <a href="courses.html">Education</a>
-          </nav>
-        
+        </nav>
+        <h1>Christopher Beaucage</h1>
     </header>
+
+    <div id="gridbox">
+    <div class="bar">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <p id="FilterBy">
+            Filter by Term:
+        </p>
+     </div>
+     <button class="filter" id="filter1"> 
+        Term 1</button>
+        <button class="filter" id="filter2">
+            Term 2
+        </button>
+        <button class="filter" id="filter3">
+            Term 3
+        </button>
+        <button class="filter" id="filter4">
+            Term 4
+        </button>
+
+        <div class="Course" id="Course1">
+            <img src="JavaIcon.png" alt="Icon for Intro to Computer Programming Course.">
+            <p>
+                CST8116 
+                Intro to Computer 
+                Programming
+            </p>
+        </div>
+
+        <div class="Course" id="Course2">
+            <img src="SQLIcon.png" alt="Icon for Intro to Databases Course.">
+            <p class="CouresTitle">
+                CST8215 
+                Intro to Databases
+            </p>
+        </div>
+
+        <div class="Course" id="Course3">
+            <img src="ComputerIcon.png" alt="Icon for Computer Essentials Course.">
+            <p class="CouresTitle">
+                CST8101 
+                Computer Essentials
+            </p>
+        </div>
+
+        <div class="Course" id="Course4">
+            <img src="MathIcon.png" alt="Icon for Technical Math Course.">
+            <p class="CouresTitle">
+                MAT8001C 
+                Technical Math for 
+                Computer Sciences
+            </p>
+        </div>
+
+        <div class="Course" id="Course5">
+            <img src="CommunicationIcon.png" alt="Icon for Communication Course.">
+            <p class="CouresTitle">
+                ENL1813T 
+                Communications
+            </p>
+        </div>
+
+        <div class="Course" id="Course6">
+            <img src="SuccessIcon.png" alt="Icon for Achieving Succes Course.">
+            <p class="CouresTitle">
+                CST8300 
+                Achieving Succes in 
+                Changing Environments
+            </p>    
+        </div>
+
+    </div>
+
 </body>
+
 </html>

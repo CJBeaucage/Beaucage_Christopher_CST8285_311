@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christopher Beaucage">
+    <title>Lab2 Order Form Page</title>
+
+    <style>
+        #ProductInfoTable,
+        #ProductInfoTable th,
+        #ProductInfoTable td {
+            border: 1px solid;
+        }
+
+        h1 {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order Form</h1>
+    <form name="SheetForm" id="SheetForm">
+        <fieldset>
+            <legend>Basic Information</legend>
+            <table id="BasicInfoTable">
+                <tr>
+                    <td>
+                        <label for="inputname"> Name: </label>
+                        <input type="text" name="Namebox" size="30" value="Chris" id="inputname" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputemail"> Email: </label>
+                        <input type="text" name="Emailbox" size="30" id="inputemail" value="beau0910@algonquinlive.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputaddress"> Address: </label>
+                        <textarea name="addressbox" cols="20" rows="4" id="inputaddress"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputpostalcode"> Postal Code: </label>
+                        <input type="text" name="PostalCode" size="30" id="inputpostalcode">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Product Information</legend>
+            <table id="ProductInfoTable">
+                <tr>
+                    <th>Product</th>
+                    <th>Part Number</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>Box</td>
+                    <td>AC100</td>
+                    <td></td>
+                    <td>$5</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Coffee Table</td>
+                    <td>AC200</td>
+                    <td></td>
+                    <td>$100</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chair</td>
+                    <td>AC300</td>
+                    <td></td>
+                    <td>$150</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Desk</td>
+                    <td>AC400</td>
+                    <td></td>
+                    <td>$120</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computer Table</td>
+                    <td>AC500</td>
+                    <td></td>
+                    <td>$130</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total:</td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+        <table id="CreditCardInfoTable">
+            <tr>
+                <th>Credit Card Information</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Credit Card Type</p>
+                </td>
+
+                <td>
+                    <label for="CreditCardNumber">Credit Card Number:</label>
+                    <input type="text" size="16" name="CreditCardNumber" id="CreditCardNumber">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="CreditCardType" id="MasterCard" value="MasterCard">
+                    <label for="MasterCard">Master Card</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="CreditCardType" id="Visa" value="Visa">
+                    <label for="Visa">Visa</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="CreditCardType" id="GiftCard" value="GiftCard">
+                    <label for="GiftCard">Gift Card</label>
+                </td>
+                <td>
+                    <label for="ExpirationDate">Expiration Date:</label>
+                    <input type="date" name="ExpirationDate" id="ExpirationDate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="DeliveryAddress">Delivery Address:</label>
+                    <textarea name="DeliveryAddress" id="DeliveryAddress" cols="25" rows="6"></textarea>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="Submit" id="Submit" value="Send Order">
+        <input type="reset" name="Reset" id="Reset" value="Clear Form">
+    </form>
+</body>
+
+
+
+</html>
