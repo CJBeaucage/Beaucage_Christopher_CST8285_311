@@ -198,20 +198,25 @@ const inspirations = [
 
 // Your code goes here.  
 
-let quote = empty;
-
-let author = empty;
-
 
 function getRandom(max) {
-       Math.floor(Math.random() * max)
+      return Math.floor(Math.random() * max);
 }
 
 function fetchQuote() {
+       
        let num = getRandom(inspirations.length);
+      
+       
+       let quoteText = inspirations[num].quote;
 
-       quote = toString(inspirations[num, 1]);
+       let quoteAuthor = inspirations[num].author;
+       
 
-       author = toString(inspirations[num, 3]);
+       document.getElementById('quoteText').textContent = quoteText;
+
+       document.getElementById('quoteAuthor').textContent = quoteAuthor;
 
 }
+
+fetchQuote();
