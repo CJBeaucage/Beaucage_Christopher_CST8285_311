@@ -1,3 +1,11 @@
+
+/*
+* Project: Lab4 Inspiration
+* Authour: Chris Beaucage
+* Date: 2022/11/10
+*/
+
+
 const inspirations = [
 
 {

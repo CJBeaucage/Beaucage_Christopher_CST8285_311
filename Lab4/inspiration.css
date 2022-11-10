@@ -1,4 +1,10 @@
 
+/*
+* Project: Lab4 Inspiration
+* Authour: Chris Beaucage
+* Date: 2022/11/10
+*/
+
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(206, 232, 206);
@@ -16,13 +22,13 @@ h1 {
 
 #quote {
     border: 15pt solid rgba(135, 107, 119, 0.599);
-    border-radius: 25%;
+    border-radius: 35px/50%;
     background-color: rgba(225, 150, 210, 0.843);
     color: rgba(21, 19, 20, 0.76);
     display: grid;
     margin: 20px;
-    grid-template-areas: ". quoteText quoteText quoteText quoteText quoteText ."
-    ". . . . quoteAuthor quoteAuthor .";
+    grid-template-areas: ". quoteText quoteText quoteText ."
+    ". . . . quoteAuthor";
 }
 
 #quoteText {
