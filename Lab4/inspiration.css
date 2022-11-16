@@ -27,8 +27,8 @@ h1 {
     color: rgba(21, 19, 20, 0.76);
     display: grid;
     margin: 20px;
-    grid-template-areas: ". quoteText quoteText quoteText ."
-    ". . . . quoteAuthor";
+    grid-template-areas: " quoteText quoteText quoteText ."
+    " . . . quoteAuthor";
 }
 
 #quoteText {
