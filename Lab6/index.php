@@ -4,6 +4,17 @@ $Genre = array("Action", "Adventure", "Comedy", "Drama");
 $Subject = array("Animation", "Children and Youth", "People")
 ?>
 <!--write your php function  here -->
+<?php
+function arrayToSelect($arrayPassed) {
+    foreach ($arrayPassed as $val) {
+        var el = document.createElement("option");
+        el.text = $val;
+        el.value = $val;
+        select.add(el);
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -35,6 +46,9 @@ $Subject = array("Animation", "Children and Youth", "People")
            <select name="genre" class="form__input form__select">
               <option>Choose genre</option> 
               <!-- use php function to display gener options -->
+              <?php 
+                arrayToSelect($Genre);
+              ?>
            </select>
        </p>
        <p class="form__row"> 
@@ -42,6 +56,9 @@ $Subject = array("Animation", "Children and Youth", "People")
            <select name="subject" class="form__input form__select">
               <option>Choose subject</option> 
               <!-- use php function to display subject options -->
+              <?php 
+                arrayToSelect($Subject);
+              ?>
            </select>
        </p>
        <p class="form__row">	
