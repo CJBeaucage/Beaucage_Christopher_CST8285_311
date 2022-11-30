@@ -1,7 +1,21 @@
 
+/*
+* Project: Lab5 Validation
+* Authour: Chris Beaucage
+* Date: 2022/11/20
+*/
+
 let buttons = document.getElementsByTagName("button");
 let signUp = buttons[0];
 let reset = buttons[1];
+
+let labels = document.getElementsByTagName("label");
+let emailLabel = labels[0];
+let loginLabel = labels[1];
+let passLabel = labels[2];
+let pass2Label = labels[3];
+let newsLabel = labels[4];
+let termsLabel = labels[5];
 
 signUp.style.backgroundColor = "cornflowerblue";
 reset.style.backgroundColor = "red";
@@ -26,7 +40,7 @@ let news = document.getElementById('newsletter');
 let agree = document.getElementById('terms');
 let errorElement = document.querySelectorAll(".textfield > div");
 
-
+console.log(errorElement)
 
 function hasLowerCase(str) {
     return str !== str.toUpperCase();
@@ -41,18 +55,18 @@ function validateEmail() {
 
     if (result == false) {
         email.style.border = "solid 1px red";
-
+        emailLabel.style.color = "#ff3300";
         validEmail = false;
         if (email.nextElementSibling === null) {
-            email.after(error, "X  Email address should be non-empty with format xyz@xyz.xyz");
-            errorElement.style.color = "red";
-
+            error.textContent = "X  Email address should be non-empty with format xyz@xyz.xyz"
+            email.after(error);
         }
     }
 
     if (result == true) {
         validEmail = true;
         email.style.border = "solid 1px black";
+        emailLabel.style.color = "#000000";
     }
 }
 
@@ -62,9 +76,10 @@ function validateLogin() {
 
     if (result == false || hasUpperCase(lowerLogin) == true) {
         login.style.border = "solid 1px red";
+        loginLabel.style.color = "#ff3300";
         validLogin = false;
         if (login.nextElementSibling === null) {
-            login.after(error, "X  Username should be non-empty and within 20 characters long");
+            login.after(error, "X  Username should be non-empty and within 20 characters long", 'fggg', 'gghgg');
             errorElement.style.color = "red";
         }
     }
@@ -73,6 +88,7 @@ function validateLogin() {
 
         validLogin = true;
         login.style.border = "solid 1px black";
+        loginLabel.style.color = "#000000";
     }
 }
 
@@ -81,6 +97,7 @@ function validatePass() {
 
     if (result == false || hasLowerCase(pass.value) == false || hasUpperCase(pass.value) == false) {
         pass.style.border = "solid 1px red";
+        passLabel.style.color = "#ff3300";
         validPass = false;
         if (pass.nextElementSibling === null) {
             pass.after(error, "X  Password should be at least 6 characters: 1 uppercase and 1 lowercase");
@@ -91,6 +108,7 @@ function validatePass() {
     if (result == true && hasLowerCase(pass.value) == true && hasUpperCase(pass.value) == true) {
         validPass = true;
         pass.style.border = "solid 1px black";
+        passLabel.style.color = "#000000";
     }
 }
 
@@ -99,6 +117,7 @@ function validatePass2() {
     if (pass.value !== pass2.value) {
         validPass2 = false;
         pass2.style.border = "solid 1px red";
+        pass2Label.style.color = "#ff3300";
         if (pass2.nextElementSibling === null) {
             pass2.after(error, "X  Please re-type password");
             errorElement.style.color = "red";
@@ -109,6 +128,7 @@ function validatePass2() {
     if (pass.value === pass2.value) {
         validPass2 = true;
         pass2.style.border = "solid 1px black";
+        pass2Label.style.color = "#000000";
     }
 
 }
@@ -117,11 +137,13 @@ function termsAgree() {
     if (agree.checked) {
         validAgree = true;
         agree.style.border = "solid 1px black";
+        termsLabel.style.color = "#000000";
     }
 
     else {
         validAgree = false;
         agree.style.border = "solid 1px red";
+        termsLabel.style.color = "#ff3300";
         if (agree.previousElementSibling === null) {
             agree.before(error, "X Please accept the terms and conditions")
             errorElement.style.color = "red";
@@ -150,19 +172,7 @@ agree.addEventListener("blur", termsAgree);
 
 function validateForm() {
 
-    validateEmail;
-
-    validateLogin;
-
-    validatePass;
-
-    validatePass2;
-
-    termsAgree;
-
-
-
-    if (validEmail == true && validLogin == true && validPass == true && validPass2 == true && validAgree == true) {
+    if (validEmail == true && validLogin == true && validPass == true && validPass2 == true) {
         validForm = true;
     }
 

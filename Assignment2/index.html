@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medialogue</title>
+</head>
+
+// will import header <?php include 'headerM.php';?>
+
+<body>
+    <form action="" method="post" onsubmit="return validate()">
+        <div>
+            <label for="email">E-mail Address</label>
+            <input type="text" name="email" id="email" placeholder="Please enter your E-mail">
+            //Need error message, in div tag with unique id
+        </div>
+        
+        <div>
+            <label for="">Username</label>
+            <input type="text" name="username" id="username" placeholder="Please enter your Username">
+            //Need error message, in div tag with unique id
+        </div>
+
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="password" id="password" placeholder="Please enter your Password">
+            //Need error message, in div tag with unique id
+        </div>
+
+        <div>
+            <label for="">Confirm Password</label>
+            <input type="password" id="confirm" placeholder="Please re-enter your Password">
+            //Need error message, in div tag with unique id
+        </div>
+    </form>
+
+    // will import footer <?php include 'footer.php';?>
+</body>
+</html>
