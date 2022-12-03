@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <title>My Favorite Movies</title>
-
-    
+</head>
 
 <body>
+
 <?php include 'paritals/header.php';?>
+
     <h1>Favorite Movies List</h1>
 
     <ul>

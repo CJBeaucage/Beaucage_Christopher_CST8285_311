@@ -53,6 +53,18 @@
 
 
     </form>
+    <?php 
+
+$data = data_connect();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$user', '$email', '$pass')";
+    mysqli_query($data, $sql);
+ }
+?>
 
     <?php include 'partials/footer.php';?>
 
