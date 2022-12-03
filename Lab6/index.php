@@ -1,34 +1,38 @@
 <!-- write your PHP script to define two string array -->
+
 <?php 
-$Genre = array("Action", "Adventure", "Comedy", "Drama");
-$Subject = array("Animation", "Children and Youth", "People")
-?>
-<!--write your php function  here -->
-<?php
-function arrayToSelect($arrayPassed) {
-    foreach ($arrayPassed as $val) {
-        var el = document.createElement("option");
-        el.text = $val;
-        el.value = $val;
-        select.add(el);
-    }
-}
+$Genre = ["Action", "Adventure", "Comedy", "Drama"];
+$Subject = ["Animation", "Children and Youth", "People"];
+$arrayPassed;
 
 ?>
+<!--write your php function  here -->
+
+
+<?php
+ function arrayToSelect($arrayPassed) {
+    forEach($arrayPassed as $val) {
+        echo "<option>$val</option>";
+    }
+ }
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="utf-8">
     <title>Lab 6</title>    
     
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles1.css" />
    
 
 </head>
 <body>
 <!-- include the hearder file here -->
-<?php include 'headerM.php';?>
-    
+
+    <?php include 'headerM.php';?>
+
+
 <main>
 <form class="form" method="post" action="process.php" id="mainForm">
    <fieldset class="form__panel">
@@ -46,9 +50,8 @@ function arrayToSelect($arrayPassed) {
            <select name="genre" class="form__input form__select">
               <option>Choose genre</option> 
               <!-- use php function to display gener options -->
-              <?php 
-                arrayToSelect($Genre);
-              ?>
+              <?php arrayToSelect($Genre); ?>
+              
            </select>
        </p>
        <p class="form__row"> 
@@ -56,9 +59,9 @@ function arrayToSelect($arrayPassed) {
            <select name="subject" class="form__input form__select">
               <option>Choose subject</option> 
               <!-- use php function to display subject options -->
-              <?php 
-                arrayToSelect($Subject);
-              ?>
+              <?php arrayToSelect($Subject); ?>
+              
+              
            </select>
        </p>
        <p class="form__row">	
@@ -81,6 +84,9 @@ function arrayToSelect($arrayPassed) {
 </form>
 </main> 
 <!-- include the footer file here -->  
-<?php include 'footerM.php';?>   
+
+<?php include 'footerM.php';?> 
+
+
 </body>
 </html>
