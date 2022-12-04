@@ -1,13 +1,19 @@
 <?php
 
 $server = "localhost:3308";
-$user = "appuser";
+$user = "root";
 $pass = "";
 $name = "medialogue";
 
 
 function data_connect()
 {
+
+  $server = "localhost:3308";
+  $user = "root";
+  $pass = "";
+  $name = "medialogue";
+
   $connection = mysqli_connect($server, $user, $pass, $name);
   if (mysqli_connect_errno()) {
     $msg = "Connection failed: ";

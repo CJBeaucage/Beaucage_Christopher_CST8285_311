@@ -6,53 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>My Favorite Movies</title>
+    <title>Input Movies</title>
 </head>
 
 <body>
 
-<?php include 'paritals/header.php';?>
+<?php include 'partials/header.php';?>
 
-    <h1>Favorite Movies List</h1>
+<form action="movieProcess.php" method="post" onsubmit="">
+        <div class="container">
+            <div class="headreg">
+                <h2>Enter Movie Information</h2>
+            </div>
 
-    <ul>
-        <li>
-            <h2>The Godfather</h2>
-            <p>A Mafia classic about a patriarch of an organized crime dynasty who transfers control of his clandestine
-                empire to his reluctant son.</p>
-            <p><strong>Genre:</strong> Crime, Drama</p>
-            <p><strong>Runtime:</strong> 2h 55min</p>
-        </li>
-        <li>
-            <h2>The Shawshank Redemption</h2>
-            <p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of
-                common
-                decency.</p>
-            <p><strong>Genre:</strong> Crime, Drama</p>
-            <p><strong>Runtime:</strong> 2h 22min</p>
-        </li>
-        <li>
-            <h2>Schindler's List</h2>
-            <p>In German-occupied Poland during World War
-            <p><strong>Genre:</strong> Crime, Drama</p>
-            <p><strong>Runtime:</strong> 2h 22min</p>
-        </li>
-        <li>
-            <h2>Die Hard</h2>
-            <p>John McClane, officer of the NYPD, tries to save his wife Holly Gennaro and several others, taken hostage
-                by
-                German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.</p>
-            <p><strong>Genre:</strong> Action</p>
-            <p><strong>Runtime:</strong> 131 minutes</p>
-        </li>
-        <li>
-            <h2>Ace Ventura: Pet Detective</h2>
-            <p>Description: When Ace Ventura is tasked with finding the Miami Dolphins' missing mascot, he goes eyeball
-                to eyeball with a man-eating shark, a gang of dungeon-dwelling monks and a bizarre relationship with a
-                loony lieutenant.</p>
-            <p>Genre: Comedy</p>
-            <p>Runtime: 85 min</p>
-        </li>
+            <div class="regItem">
+                <label for="movieTitle" class="aaa">Enter Title</label>
+                <input type="text" name="movieTitle" id="movieTitle" placeholder="Enter movie title">
+            </div>
+
+            <div class="regItem">
+                <label for="movieGenre" class="aaa">Select Genre</label>
+                <select name="movieGenre" id="movieGenre">
+                    <option value="action" selected>Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="scienceFiction">Science-Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="western">Western</option>
+                    <option value="romance">Romance</option>
+                </select>
+            </div>
+
+            <div class="regItem">
+                <label for="movieRating" class="aaa">Select Rating</label>
+                <select name="movieRating" id="movieRating">
+                    <option value="general" selected>G - General audience</option>
+                    <option value="parentalGuidance">PG - Parental Guidance Suggested</option>
+                    <option value="parentalGuidance13">PG13 - Parental Guidance Strongly Advised</option>
+                    <option value="restriced">R - Restriced</option>
+                </select>
+            </div>
+
+            <div class="regItem">
+                <label for="movieDescribe" class="aaa">Enter Description</label>
+                <input type="textarea" name="movieDescribe" id="movieDescribe" placeholder="Enter movie description">
+            </div>
+
+            <div class="regItem">
+                <label for="movieTime" class="aaa">Enter Run-time</label>
+                <input type="text" name="movieTime" id="movieTime" placeholder="Enter movie run-time">
+            </div>
+
+
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
         <?php include 'partials/footer.php';?>
 </body>
 

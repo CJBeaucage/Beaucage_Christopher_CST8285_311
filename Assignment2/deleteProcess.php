@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +12,22 @@
 require_once 'database.php'; ?>
 
 
+<?php    
+    $data = data_connect();
+
+    $table = $_GET['mediaDelete'];
+   
+    $id = $_GET['idDelete'];
+
+  $sql = "DELETE FROM $table WHERE id ='$id'";
+  $result = mysqli_query($data, $sql);
+
+?>
 
     
-    <h1>Login Information Saved</h1>
+    <h1>Content deleted!</h1>
     <hr>
-    <div class='container'>
-        <p>Welcome <?php echo $_POST['username']; ?>!</p> 
-        <p>E-mail <?php echo $_POST['email'];; ?></p>
-
-    </div>
-
-    <?php include 'partials/footer.php';?> 
+    
+    <?php include 'partials/footer.php';?>
 </body>
 </html>

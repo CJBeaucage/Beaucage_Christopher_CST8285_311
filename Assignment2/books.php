@@ -6,59 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>My Books</title>
+    <title>Input Books</title>
 </head>
 
 <body>
 
 <?php include 'partials/header.php';?>
-<h2>Favorite Books</h2>
 
-    <ul>
-        <li>
-            <h2>The Catcher in the Rye</h2>
-            <p><strong>Author:</strong> J.D. Salinger</p>
-            <p><strong>Category:</strong> Novel</p>
-            <p><strong>Description:</strong> A classic coming-of-age novel following a teenage protagonist<br>
-            <p><strong>Pages:</strong> 224</p>
-        </li>
-        <li>
-            <h2> The Great Gatsby</h2>
-            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
-            <p><strong>Category:</strong> Novel</p>
-            <p><strong>Description:</strong> A novel about the pursuit of the American Dream<br>
-            <p><strong>Pages:</strong> 180
-        </li>
-        <li>
-            <h2>The Hitchhiker's Guide to the Galaxy</h2>
-            <p><strong>Author:</strong> Douglas Adams</p>
-            <p><strong>Category:</strong> Science Fiction</p>
-            <p><strong>Description:</strong> A comedy science fiction novel about space exploration</p>
-            <strong>Pages:</strong> 224
-        </li>
-        <li>
-            <h2>The Catcher in the Rye</h2>
-            <p><strong>Author:</strong>Author: J.D. Salinger</p>
-            <p><strong>Category:</strong> Fiction<br>
-            <p> Description: A classic novel of teenage angst and rebellion.</p>
-            <p><strong>Pages:</strong>Pages: 224</p>
-        </li>
-        <li>
-            <h2>The Great Gatsby</h2>
-            <p><strong>Author:</strong>Author: F. Scott Fitzgerald<br>
-            <p><strong>Category:</strong> Fiction<br>
-            <p><strong> Description: A masterpiece of social commentary.<br>
-                    <p><strong>Pages:</strong>Pages: 180<br>
-        </li>
-        <li>
-            <h2>The Lord of the Rings</h2>
-            <p><strong>Author:</strong>Author: J.R.R. Tolkien<br>
-            <p><strong>Category:</strong>Fantasy<br>
-            <p><strong> Description: A classic fantasy epic.</p>
-            <p></p><strong>Pages:</strong>Pages: 1178<br>
-        </li>
 
-        <?php include 'partials/footer.php';?>
+    <form action="bookProcess.php" method="post" onsubmit="">
+        <div class="container">
+            <div class="headreg">
+                <h2>Enter Book Information</h2>
+            </div>
+
+            <div class="regItem">
+                <label for="bookTitle" class="aaa">Enter Title</label>
+                <input type="text" name="bookTitle" id="bookTitle" placeholder="Enter book title">
+            </div>
+
+            <div class="regItem">
+                <label for="bookAuth" class="aaa">Enter Authour</label>
+                <input type="text" name="bookAuth" id="bookAuth" placeholder="Enter book authour">
+            </div>
+
+            <div class="regItem">
+                <label for="bookCategory" class="aaa">Select Category</label>
+                <select name="bookCategory" id="bookCategory">
+                    <option value="nonFiction" selected>Non-fiction</option>
+                    <option value="childrens">Children's Book</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="scienceFiction">Science-Fiction</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="history">History</option>
+                    <option value="biography">Biography</option>
+                </select>
+            </div>
+
+            <div class="regItem">
+                <label for="bookDescribe" class="aaa">Enter Description</label>
+                <input type="textarea" name="bookDescribe" id="bookDescribe" placeholder="Enter book description">
+            </div>
+
+            <div class="regItem">
+                <label for="bookPages" class="aaa">Enter Page-count</label>
+                <input type="text" name="bookPages" id="bookPages" placeholder="Enter page count">
+            </div>
+            
+            <button type="submit" class="submit">Submit</button>
+        </div>
+    </form>
+
+    <?php include 'partials/footer.php';?>
 
 </body>
 
